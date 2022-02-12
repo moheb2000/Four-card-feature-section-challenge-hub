@@ -1,2 +1,120 @@
 @import "reset.css";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+  --cl-red: hsl(0, 78%, 62%);
+  --cl-cyan: hsl(180, 62%, 55%);
+  --cl-orange: hsl(34, 97%, 64%);
+  --cl-blue: hsl(212, 86%, 64%);
+  --cl-very-dark-blue: hsl(234, 12%, 34%);
+  --cl-grayish-blue: hsl(229, 6%, 66%);
+  --cl-very-light-gray: hsl(0, 0%, 98%);
+  --cl-white: hsl(0, 100%, 100%);
+
+  --fs-defualt: 15px;
+
+  font: 400 var(--fs-defualt) Poppins;
+}
+
+@media all and (min-width: 1024px) {
+  :root {
+    font-size: 18px;
+  }
+}
+
+body {
+  background:var(--cl-very-light-gray);
+}
+
+main {
+  width: 80%;
+  margin: 7rem 10%;
+}
+
+h1 {
+  color: var(--cl-very-dark-blue);
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 200;
+  line-height: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+span {
+  font-weight: 600;
+}
+
+h2 {
+  color: var(--cl-very-dark-blue);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+p {
+  line-height: 1.5rem;
+  color: var(--cl-grayish-blue);
+}
+
+img {
+  display: block;
+  margin-left: auto;
+}
+
+.intro-block {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  background: var(--cl-white);
+  border-radius: .8rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0px 2px 1rem var(--cl-grayish-blue);
+}
+
+.card p {
+  margin-bottom: 1rem;
+}
+
+.card-1 {
+  border-top: 5px solid var(--cl-cyan);
+}
+
+.card-2 {
+  border-top: 5px solid var(--cl-red);
+}
+
+.card-3 {
+  border-top: 5px solid var(--cl-orange);
+}
+
+.card-4 {
+  border-top: 5px solid var(--cl-blue);
+}
+
+.column {
+  flex: 1;
+}
+
+@media all and (min-width: 768px) {
+  .cards {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .card {
+    margin: 0 1rem 1rem;
+  }
+}
